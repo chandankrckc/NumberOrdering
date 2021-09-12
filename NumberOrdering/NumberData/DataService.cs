@@ -47,6 +47,16 @@ namespace NumberOrdering.Data
         public Numbers PostArrayData(Numbers num)
         {
             int ids = num.arList.Count;
+            /*Use BubbleSort when the dataset is small or it is almost sorted
+            Time complexity = o(n*n)
+            num.arList = BubbleSort.BubbleSorting(num.arList);
+
+            QuickSort is more effective for datasets that fit in memory. For larger data sets it proves to be inefficient. Also if array is sorted
+            the its time complexity is o(n*n)
+            num.arList = QuickSort.quickSort(num.arList, 0, ids - 1);
+
+            Use MergeSort for large data sets.
+            Time Complexity = O(nlogn) */
             num.arList = MergeSort.SortMerge(num.arList, 0, ids-1);
 
             //By default saving data in D drive and temp folder

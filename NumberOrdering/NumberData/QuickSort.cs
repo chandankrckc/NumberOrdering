@@ -33,7 +33,7 @@ namespace NumberOrdering.NumberData
                 }
             }
         }
-        static public void quickSort(List<int> arr, int left, int right)
+        static public List<int> quickSort(List<int> arr, int left, int right)
         {
             int pivot;
             if (left < right)
@@ -48,6 +48,7 @@ namespace NumberOrdering.NumberData
                     quickSort(arr, pivot + 1, right);
                 }
             }
+            return arr;
         }
     }
 }
